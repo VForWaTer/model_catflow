@@ -1,4 +1,4 @@
-import os
+import os, subprocess
 import sys
 
 from parameters import get_data, get_logger, get_parameters
@@ -7,7 +7,7 @@ params = get_parameters()
 data = get_data()
 logger = get_logger()
 
-toolname = os.environ.get("TOOL_RUN", "foobar").lower()
+toolname = os.environ.get("TOOL_RUN", "catflow").lower()
 
 logger.info("start", "Starting tool run", tool=toolname)
 logger.info(
@@ -18,7 +18,10 @@ logger.info(
     data_keys=sorted(data.keys()),
 )
 
-if toolname == "foobar":
+if toolname == "catflow":
+    # Run the CATFLOW model
+    pass
+else:
     sys.stderr.write("This toolbox does not include any tool. Did you run the template?\n")
     sys.stderr.write(f"{vars(params)}\n")
 
