@@ -1,8 +1,12 @@
 tools:
   catflow:
     title: CATFLOW Hydrological Model
-    description: A gfortan version of the CATFLOW hydrological model, wrapped in a Python tool interface.
+    description: A gfortran version of the CATFLOW hydrological model, wrapped in a Python tool interface.
     command: "python run.py"
+    parameters:
+      simulation_id:
+        type: string
+        default: "initial_simulation"
     data:
       inp_dir:
         description: A folder containing the input files for the CATFLOW model.

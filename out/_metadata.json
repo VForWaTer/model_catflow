@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "user_time": 1433480652000,
+  "system_time": 23760414000,
+  "memory_max_bytes": 1900544,
+  "memory_average_bytes": 1900544,
+  "cpu_max_permille": 0,
+  "cpu_average_permille": 0,
+  "read_bytes_sum": 0,
+  "write_bytes_sum": 0,
+  "run_id": "63183d86dffdf958",
+  "log_file": "../out/_logs.jsonl",
+  "log_format": "jsonl",
+  "log_level": "info"
+}

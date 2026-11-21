@@ -122,7 +122,16 @@ venv.bak/
 
 # gotap-generated bindings (built during Docker build)
 src/parameters.py
-out/
+
+# folders
+/in/*
+!/in/input.json
+!/in/catflow.in
+!/in/run_cat.in
+/out/*
+!/out/log.out
+!/out/_metadata.json
+!/out/_logs.jsonl
 
 # mypy
 .mypy_cache/

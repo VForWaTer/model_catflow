@@ -1,0 +1,389 @@
+27.06.1994 12:00:00.00         % Begin Simulation                                                
+28.06.1994 23:00:00.00        % End   Simulation                                                  
+        0.0                    % Zeit Offset                                              
+pic                            % Berechnungsverfahren (exp, adi, apk, bcg, pic, mix)      
+      300                    % dtbach [s]                                               
+        5.e-7                  % qtol   [cbm/s pro s]                                     
+1200.                     % dtmax [s]                                               
+        1                   % dtmin [s]                                               
+       10.00                   % dt [s] (Startzeitschritt)                                
+        0.01                   % dThopt [-] Steuerpar. fuer Zeitschritt                 
+        0.01                   % dPhiopt [-]    Steuerpar. fuer Zeitschritt             
+         3                     % ngr (3) ab ngr Picardit. nur Zeitschr.Reduk.           
+         7                     % itmax (7) max. Picarditerationen                        
+        1.e-3                  % piceps [-] (1.e-3) Iterationsziel Picard                 
+        5.e-6                  % cgeps  [m] (5.e-6) Iterationsziel Konj.Grad.             
+       15.                     % rlongi Bezugslaenge fuer Uhrzeit (hier: MEZ)             
+        8.75                   % longi  Bezugslaenge des EZG                              
+       49.13                   % lati   Bezugsbreite  des EZG                             
+       0                      % istact Anzahl der verschiendenen Stoffe                  
+       -80                     % seed fuer Zufallszahlengenerator                         
+noiact			       % Randbedingungstyp fuer Stoffinput                                       
+     18                       % Anzahl der Ausgabefiles                                            
+0 0 1  0 0 0  0 0 1  1 1 1 0 0 0 0 0 0 0                                                      
+out/log.out                   % ofile(1)  Log-file  
+out/vgtab.out                 % ofile(2)  tables fo soil hydraulic properties 
+out/bilanz.csv                % ofile(3)  water balance file  
+out/theta.out                 % ofile(4)  soil water content  
+out/psi.out                   % ofile(5)  suction head  
+out/psi.fin                   % ofile(6)  final state (suction head)
+out/flxsi.out                 % ofile(7)  water flux in xsi-direction (lateral) 
+out/fleta.out                 % ofile(8)  water flux in eta-direction (vertical) 
+out/senken.out                % ofile(9)  sinks [qm/s]  
+out/qoben.out                 % ofile(10) Surface runoff[cbm/s]  
+out/etinz.out                 % ofile(11) Evapotranspiration  
+out/gang.out                  % ofile(12) channel flow  
+out/ve.out                    % ofile(13) generalised pore water velocity in eta-direction  
+out/vx.out                    % ofile(14) generalised pore water velocity in xsi-direction  
+out/c.out                     % ofile(15) residual solute concentrations  
+out/hko.out                   % ofile(16) vertical hillslope coordinates (grid nodes) Rehe/in/ebnitbach.def  
+out/sko.out                    % ofile(17) lateral hillslope coordinates (grid nodes) Rehe/in/ebnitsoilcp.def
+out/relsat.out                 % ofile(18) relative Saturation              
+5
+in/soil/soil_types_3.def        
+in/precip/boundary.def         
+in/landuse/landuseclass.def      
+in/climate/winddir.def        
+in/control/stream_8.def   
+34
+in/hillslope_1/hillgeo/rep_hill.geo          
+in/soil/soil_085.dat                             
+in/hillslope_1/soil/ksmult0.dat              
+in/hillslope_1/soil/thsmult0.dat             
+in/soil/mac.dat              
+in/control/cont_vol.dat         
+in/soil/rel_sat_1994.ini   
+in/control/printout_1994.prt       
+in/hillslope_1/landuse/surface.pob           
+in/control/boundary.dat         
+in/hillslope_2/hillgeo/rep_hill.geo
+in/soil/soil_085.dat  
+in/hillslope_2/soil/ksmult0.dat
+in/hillslope_2/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_2/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_3/hillgeo/rep_hill.geo
+in/soil/soil_085.dat  
+in/hillslope_3/soil/ksmult0.dat
+in/hillslope_3/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_3/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_4/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_4/soil/ksmult0.dat
+in/hillslope_4/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_4/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_5/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_5/soil/ksmult0.dat
+in/hillslope_5/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_5/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_6/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_6/soil/ksmult0.dat
+in/hillslope_6/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_6/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_7/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_7/soil/ksmult0.dat
+in/hillslope_7/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_7/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_8/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_8/soil/ksmult0.dat
+in/hillslope_8/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_8/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_9/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_9/soil/ksmult0.dat
+in/hillslope_9/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_9/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_10/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_10/soil/ksmult0.dat
+in/hillslope_10/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_10/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_11/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_11/soil/ksmult0.dat
+in/hillslope_11/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_11/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_12/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_12/soil/ksmult0.dat
+in/hillslope_12/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_12/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_13/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_13/soil/ksmult0.dat
+in/hillslope_13/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_13/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_14/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_14/soil/ksmult0.dat
+in/hillslope_14/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_14/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_15/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_15/soil/ksmult0.dat
+in/hillslope_15/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_15/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_16/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_16/soil/ksmult0.dat
+in/hillslope_16/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_16/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_17/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_17/soil/ksmult0.dat
+in/hillslope_17/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_17/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_18/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_18/soil/ksmult0.dat
+in/hillslope_18/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_18/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_19/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_19/soil/ksmult0.dat
+in/hillslope_19/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_19/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_20/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_20/soil/ksmult0.dat
+in/hillslope_20/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_20/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_21/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_21/soil/ksmult0.dat
+in/hillslope_21/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_21/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_22/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_22/soil/ksmult0.dat
+in/hillslope_22/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_22/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_23/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_23/soil/ksmult0.dat
+in/hillslope_23/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_23/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_24/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_24/soil/ksmult0.dat
+in/hillslope_24/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_24/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_25/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_25/soil/ksmult0.dat
+in/hillslope_25/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_25/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_26/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_26/soil/ksmult0.dat
+in/hillslope_26/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_26/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_27/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_27/soil/ksmult0.dat
+in/hillslope_27/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_27/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_28/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_28/soil/ksmult0.dat
+in/hillslope_28/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_28/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_29/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_29/soil/ksmult0.dat
+in/hillslope_29/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_29/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_30/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_30/soil/ksmult0.dat
+in/hillslope_30/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_30/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_31/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_31/soil/ksmult0.dat
+in/hillslope_31/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_31/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_32/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_32/soil/ksmult0.dat
+in/hillslope_32/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_32/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_33/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_33/soil/ksmult0.dat
+in/hillslope_33/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_33/landuse/surface.pob
+in/control/boundary.dat
+in/hillslope_34/hillgeo/rep_hill.geo
+in/soil/soil_085.dat    
+in/hillslope_34/soil/ksmult0.dat
+in/hillslope_34/soil/thsmult0.dat
+in/soil/mac.dat              
+in/control/cont_vol.dat
+in/soil/rel_sat_1994.ini
+in/control/printout_1994.prt
+in/hillslope_34/landuse/surface.pob
+in/control/boundary.dat
+
